@@ -1,6 +1,7 @@
 # 🛒 E-Commerce Store Week#3 Task Under Internship Pakistan
 
 This project is my week#3 task of my Internship under Internship Pakistan. A **fully responsive modern e-commerce web application** built with **React**, featuring smooth UI, cart management, product details, checkout flow, and a clean design with a custom color scheme.
+
 🌐 Live Demo: https://e-commerce-project-week-3.netlify.app
 
 ---
