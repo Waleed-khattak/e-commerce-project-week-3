@@ -1,0 +1,340 @@
+.home-hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 90px);
+    overflow: hidden;
+    z-index: 5;
+}
+
+.home-hero .slide1,
+.home-hero .slide2,
+.home-hero .slide3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    animation: zoomIn 15s infinite;
+}
+
+/* 3 different slides */
+.home-hero .slide1 {
+    background-image: url('../assets/images/hero-banner-1.png');
+    animation-delay: 0s;
+    filter: brightness(0.35);
+}
+
+.home-hero .slide2 {
+    background-image: url('../assets/images/hero-banner-2.jpg');
+    animation-delay: 5s;
+    filter: brightness(0.35);
+}
+
+.home-hero .slide3 {
+    background-image: url('../assets/images/hero-banner-3.jpg');
+    animation-delay: 10s;
+    filter: brightness(0.35);
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    5% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    35% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.home-hero .hero-banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+.home-hero .hero-banner .hero-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    height: inherit;
+    gap: 60px;
+}
+
+.home-hero .hero-banner h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.home-hero .hero-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.home-hero .hero-banner .promo-offer {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 20%;
+    color: black;
+}
+
+.home-hero .hero-banner .signature-text {
+    width: 70%;
+}
+
+.home-hero .hero-banner .signature-text h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 6rem;
+}
+
+.home-hero .hero-banner .signature-text p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.price-tag-container {
+    position: relative;
+    display: inline-block;
+}
+
+.price-tag {
+    display: inline-block;
+    width: auto;
+    height: 38px;
+    -webkit-border-radius: 3px 4px 4px 3px;
+    -moz-border-radius: 3px 4px 4px 3px;
+    border-radius: 3px 4px 4px 3px;
+    border-left: 1px solid #333;
+    position: absolute;
+    color: white;
+    padding: 0 15px 0 15px;
+    font-size: 1.4rem;
+    left: 120%;
+    top: 15px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(180, 1, 1);
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1.2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Makes the triangle */
+.price-tag:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 19px solid #141414;
+}
+
+/* Makes the circle */
+.price-tag:after {
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 17px;
+}
+
+@media screen and (max-width: 1100px) {
+    .home-hero .hero-banner h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .home-hero .hero-banner .hero-banner-content {
+        flex-direction: column-reverse;
+        gap: 40px;
+        height: auto;
+    }
+
+    .home-hero .hero-banner .hero-banner-content .promo-offer {
+        width: 100%;
+    }
+
+    .home-hero .hero-banner .hero-banner-content .signature-text {
+        width: 100%;
+    }
+
+    .price-tag {
+        left: 10%;
+        top: -110%;
+        transform: rotate(-90deg);
+        font-size: 1.2rem;
+        padding: 0 10px 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .home-hero .hero-banner .signature-text h1 {
+        font-size: 4rem;
+    }
+
+    .home-hero .hero-banner .signature-text p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home-hero .hero-banner .signature-text h1 {
+        font-size: 3rem;
+    }
+
+    .home-hero .hero-banner .signature-text p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Featured Product Section  */
+
+.featured-products-section {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.featured-products-section .featured-products-content .featured-product {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.product-card {
+    flex: 1 1 250px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+}
+
+.product-card::before {
+    content: 'Hot';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    background-color: rgb(180, 1, 1);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 0.8rem;
+    z-index: 5;
+    text-transform: uppercase;
+    animation: fadeIn .9s ease infinite;
+    perspective: 1000px;
+}
+
+@media screen and (max-width: 400px) {
+    .product-card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    }
+}
+
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    object-position: top;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.product-card:hover img {
+    transform: scale(1.7) rotateX(8deg) rotateY(8deg);
+    z-index: 999;
+}
+
+.product-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.btn-and-product-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product-price {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+@media screen and (max-width: 610px) {
+    .product-card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,97 @@
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 50px 20px;
+    padding-bottom: 20px;
+    background-color: var(--surface-color);
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-content .footer-about {
+    width: 40%;
+    text-align: justify;
+}
+
+.footer-content .footer-about h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.4rem;
+    font-weight: bolder;
+    margin-bottom: 0.8rem;
+}
+
+.footer-content .footer-quick-links h2,
+.footer-content .footer-contact-info h2 {
+    font-weight: bolder;
+    margin-bottom: 0.8rem;
+}
+
+.footer-content .footer-quick-links ul li {
+    margin: 0.5rem 0;
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+.footer-content .footer-contact-info h2,
+.footer-content .footer-contact-info p,
+.footer-content .footer-contact-info div {
+    margin: 0.8rem 0;
+}
+
+.footer-content .footer-contact-info .social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 730px) {
+
+    .footer {
+        padding-inline: 10px;
+        padding-bottom: 20px;
+    }
+
+    .footer-content {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .footer-content .footer-about,
+    .footer-content .footer-quick-links,
+    .footer-content .footer-contact-info {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .footer-content .footer-about p {
+        margin-bottom: 16px;
+    }
+
+}
+
+.bottom-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.8rem 0;
+    text-align: center;
+    background: #fff;
+    font-size: 0.9rem;
+    color: #475569;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .bottom-footer {
+        font-size: 0.7rem;
+    }
+    
+}
